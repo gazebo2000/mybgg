@@ -146,7 +146,7 @@ class GitHubAuth:
                 dir_stat = self.token_file.parent.stat()
                 logger.debug(f"Directory permissions: {oct(dir_stat.st_mode)[-3:]}")
                 logger.debug(f"Directory owner: {dir_stat.st_uid}")
-                logger.debug(f"Current user: {os.getuid()}")
+            #   logger.debug(f"Current user: {os.getuid()}")
 
             logger.debug("Opening file for writing...")
             with open(self.token_file, 'w') as f:
